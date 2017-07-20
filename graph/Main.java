@@ -14,14 +14,14 @@ public class Main {
     if (out == null) return "";
 
     if (out.contains(end)) {
-      return start + " --> " + end;
+      return start.toString() + " --> " + end.toString();
     }
 
     for(T o : out) {
       if (!touched.contains(o)) {
         String p = getPath(g, o, end, touched);
         if (p.equals("")) continue;
-        return start + " --> " + p;
+        return start.toString() + " --> " + p.toString();
       }
     }
     return "";
